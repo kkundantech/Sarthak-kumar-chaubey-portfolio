@@ -1,0 +1,20 @@
+.skills { overflow:hidden; }
+.skills__bg { position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(20,184,166,0.04) 0%,transparent 70%);pointer-events:none; }
+.skills__tabs { display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px; }
+.skills__tab { padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;color:var(--text-2);background:var(--surface);border:1px solid var(--border);transition:all 0.25s var(--ease-spring); }
+.skills__tab:hover { color:var(--text-1);border-color:var(--border-acc); }
+.skills__tab--on { background:var(--teal);color:#fff;border-color:var(--teal);box-shadow:0 4px 20px rgba(20,184,166,0.35);transform:translateY(-2px); }
+.skills__grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:40px; }
+.skills__card { opacity:0;transform:translateY(20px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease),border-color var(--t),box-shadow var(--t),background 0.4s;padding:18px; }
+.skills__card--visible { opacity:1;transform:translateY(0); }
+.skills__card-row { display:flex;align-items:center;gap:12px;margin-bottom:12px; }
+.skills__icon { font-size:22px;flex-shrink:0; }
+.skills__info { flex:1; }
+.skills__name { font-size:14px;font-weight:700;color:var(--text-1); }
+.skills__cat-label { font-size:10.5px;color:var(--text-3);margin-top:2px;text-transform:uppercase;letter-spacing:0.06em; }
+.skills__level { font-size:12px;font-weight:700;color:var(--teal);flex-shrink:0;padding:4px 10px;background:rgba(20,184,166,0.1);border-radius:6px;text-transform:capitalize; }
+.skills__soft { display:flex;align-items:center;gap:20px;padding:24px 28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);flex-wrap:wrap;transition:background 0.4s,border-color 0.4s; }
+.skills__soft-label { font-size:12px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.12em;flex-shrink:0; }
+.skills__soft-row { display:flex;flex-wrap:wrap;gap:8px; }
+.skills__soft-badge { background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.25);color:var(--emerald);transition:all 0.2s var(--ease-spring); }
+.skills__soft-badge:hover { background:rgba(16,185,129,0.2);transform:translateY(-2px);box-shadow:0 4px 14px rgba(16,185,129,0.2); }

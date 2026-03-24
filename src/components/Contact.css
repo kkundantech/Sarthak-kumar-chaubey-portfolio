@@ -1,0 +1,41 @@
+.contact { overflow:hidden; }
+.contact__ring { position:absolute;border-radius:50%;border:1px solid var(--border);pointer-events:none;opacity:0.3; }
+.contact__ring--1 { width:600px;height:600px;top:50%;left:-200px;transform:translateY(-50%); }
+.contact__ring--2 { width:400px;height:400px;top:50%;left:-100px;transform:translateY(-50%); }
+.contact__ring--animate { animation:spin 40s linear infinite; }
+.contact__ring--2.contact__ring--animate { animation:spin 28s linear infinite reverse; }
+@keyframes spin { from{rotate:0deg}to{rotate:360deg} }
+.contact__grid { display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start; }
+.contact__form-card { padding:34px; }
+.contact__form { display:flex;flex-direction:column;gap:22px; }
+.contact__field { display:flex;flex-direction:column;gap:7px;position:relative; }
+.contact__label { font-size:12px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s; }
+.contact__field--focus .contact__label { color:var(--teal); }
+.contact__input { background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:13px 16px;font-size:14px;color:var(--text-1);font-family:var(--font-body);transition:border-color 0.25s,background 0.25s,box-shadow 0.25s;resize:none;outline:none;width:100%; }
+.contact__input::placeholder { color:var(--text-3); }
+.contact__input:focus { border-color:var(--teal);background:var(--surface-3);box-shadow:0 0 0 3px rgba(20,184,166,0.1); }
+.contact__field-line { position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--teal),var(--emerald));border-radius:2px;transition:width 0.35s var(--ease);pointer-events:none; }
+.contact__field--focus .contact__field-line { width:100%; }
+.contact__textarea { min-height:130px; }
+.contact__submit { width:100%;justify-content:center;padding:15px;font-size:15px;transition:all 0.2s var(--ease-spring) !important; }
+.contact__submit--sent { background:var(--emerald) !important;box-shadow:0 8px 24px rgba(16,185,129,0.35) !important; }
+.contact__info-col { display:flex;flex-direction:column;gap:14px; }
+.contact__info-card { padding:26px; }
+.contact__info-h { font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text-1);margin-bottom:18px; }
+.contact__info-list { display:flex;flex-direction:column;gap:4px; }
+.contact__info-row { display:flex;align-items:center;gap:13px;padding:11px;border-radius:var(--r-sm);transition:background 0.2s,transform 0.2s var(--ease-spring); }
+.contact__info-row:hover { background:var(--surface-2);transform:translateX(5px); }
+.contact__info-row:hover .contact__arrow { opacity:1;transform:translateX(0); }
+.contact__info-icon { width:36px;height:36px;border-radius:9px;border:1px solid;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.contact__info-label { font-size:10.5px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px; }
+.contact__info-value { font-size:12.5px;font-weight:600;color:var(--text-1);word-break:break-all; }
+.contact__arrow { margin-left:auto;color:var(--text-3);opacity:0;transform:translateX(-6px);transition:opacity 0.2s,transform 0.2s var(--ease-spring);flex-shrink:0; }
+.contact__avail { display:flex;align-items:center;gap:16px;padding:18px 22px; }
+.contact__avail-dot { width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(20,184,166,0.15);flex-shrink:0;animation:pulseGreen 2s infinite; }
+.contact__avail-title { font-size:14px;font-weight:700;color:var(--text-1);margin-bottom:3px; }
+.contact__avail-sub { font-size:12px;color:var(--text-3);line-height:1.5; }
+.contact__bottom { margin-top:44px;padding:22px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);font-size:14.5px;color:var(--text-2);position:relative;overflow:hidden;transition:background 0.4s,border-color 0.4s; }
+.contact__bottom::before { content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.04),transparent);animation:shimmer 3s ease-in-out infinite; }
+@keyframes shimmer { 0%{transform:translateX(-100%)}100%{transform:translateX(100%)} }
+@media (max-width:900px) { .contact__grid{grid-template-columns:1fr} }
+@media (max-width:600px) { .contact__form-card{padding:22px 18px} }

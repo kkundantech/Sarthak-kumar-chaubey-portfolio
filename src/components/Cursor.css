@@ -1,0 +1,6 @@
+.cur__dot, .cur__ring { position:fixed; border-radius:50%; pointer-events:none; z-index:99999; will-change:transform; }
+.cur__dot { width:8px; height:8px; background:#fff; mix-blend-mode:difference; transition:transform 0.1s; }
+.cur__dot--click { transform:scale(0.4); }
+.cur__ring { width:36px; height:36px; border:1.5px solid rgba(255,255,255,0.55); mix-blend-mode:difference; transition:width 0.35s var(--ease-spring),height 0.35s var(--ease-spring); }
+.cur__ring--hover { width:56px; height:56px; border-color:rgba(20,184,166,0.9); }
+@media (max-width:900px) { .cur__dot,.cur__ring { display:none; } }
